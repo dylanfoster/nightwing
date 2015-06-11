@@ -1,0 +1,32 @@
+{
+  "name": "nightwing",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./index.js",
+  "scripts": {
+    "docs": "./node_modules/.bin/jsdoc lib/* README.md -d docs -p",
+    "test": "./node_modules/.bin/gulp"
+  },
+  "homepage": "https://github.com/dylanfoster/nightwing",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dylanfoster/nightwing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dylanfoster/nightwing/issues"
+  },
+  "keywords": [
+    "webdriver",
+    "selenium",
+    "mocha"
+  ],
+  "author": "Dylan Foster <dylan947@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "gulp": "^3.8.6",
+    "jsdoc": "^3.3.0-alpha9"
+  }
+}
