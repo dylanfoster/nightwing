@@ -1,7 +1,7 @@
 {
   "name": "nightwing",
   "version": "0.0.1",
-  "description": "",
+  "description": "placeholder for the nightwing project",
   "main": "./index.js",
   "scripts": {
     "docs": "./node_modules/.bin/jsdoc lib/* README.md -d docs -p",
