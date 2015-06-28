@@ -23,6 +23,7 @@
     "babel-eslint": "^3.1.19",
     "chai": "^3.0.0",
     "coveralls": "^2.11.2",
+    "express": "^4.13.0",
     "gulp": "^3.6.0",
     "gulp-babel": "^5.1.0",
     "gulp-eslint": "^0.14.0",
@@ -30,11 +31,16 @@
     "gulp-mocha": "^2.0.0",
     "gulp-plumber": "^1.0.0",
     "isparta": "^3.0.3",
-    "mocha": "^2.2.5"
+    "mocha": "^2.2.5",
+    "nock": "^2.6.0"
   },
   "scripts": {
     "test": "node_modules/.bin/_mocha --compilers js:babel/register --recursive",
     "test:cover": "node_modules/.bin/gulp"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "extend": "^2.0.1",
+    "selenium-webdriver": "^2.46.1"
+  }
 }
