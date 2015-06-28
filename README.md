@@ -12,19 +12,29 @@ $ npm install --save nightwing
 ## Usage
 
 ```js
-var nightwing = require('nightwing');
+describe("foo", function () {
+  beforeEach(function () {
+    return browser.get("http://google.com");
+  });
 
-nightwing('Rainbow');
+  it("bar", function () {
+    fillIn(".username");
+    fillIn(".password");
+    click(".login");
+
+    expect(title()).to.eql("foo");
+  });
+});
 ```
 
 ## License
 
-MIT © [Dylan Foster]()
+MIT © Dylan Foster
 
 
 [npm-image]: https://badge.fury.io/js/nightwing.svg
 [npm-url]: https://npmjs.org/package/nightwing
-[travis-image]: https://travis-ci.org//nightwing.svg?branch=master
-[travis-url]: https://travis-ci.org//nightwing
-[daviddm-image]: https://david-dm.org//nightwing.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org//nightwing
+[travis-image]: https://travis-ci.org/dylanfoster/nightwing.svg?branch=development
+[travis-url]: https://travis-ci.org/dylanfoster/nightwing
+[daviddm-image]: https://david-dm.org/dylanfoster/nightwing.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/dylanfoster/nightwing
