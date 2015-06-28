@@ -32,7 +32,8 @@
     "mocha": "^2.2.5"
   },
   "scripts": {
-    "test": "node_modules/.bin/gulp"
+    "test": "node_modules/.bin/_mocha --compilers js:babel/register --recursive",
+    "test:cover": "node_modules/.bin/gulp"
   },
   "license": "MIT"
 }
