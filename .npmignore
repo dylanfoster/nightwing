@@ -1,4 +1,2 @@
-/coverage
-/docs
-/node_modules
-/test
+/coverage/
+/docs/

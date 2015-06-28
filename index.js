@@ -1,2 +1,3 @@
 "use strict";
-module.exports = require("./lib/nightwing");
+
+module.exports = require("./dist/nightwing");

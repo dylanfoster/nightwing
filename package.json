@@ -1,32 +1,38 @@
 {
   "name": "nightwing",
-  "version": "0.0.1",
-  "description": "placeholder for the nightwing project",
-  "main": "./index.js",
-  "scripts": {
-    "docs": "./node_modules/.bin/jsdoc lib/* README.md -d docs -p",
-    "test": "./node_modules/.bin/gulp"
-  },
+  "version": "0.0.0",
+  "description": "Human based interaction library for webdriver js",
   "homepage": "https://github.com/dylanfoster/nightwing",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:dylanfoster/nightwing.git"
+  "repository": "dylanfoster/nightwing",
+  "author": {
+    "name": "Dylan Foster",
+    "email": "dylan947@gmail.com",
+    "url": ""
   },
-  "bugs": {
-    "url": "https://github.com/dylanfoster/nightwing/issues"
-  },
-  "keywords": [
-    "webdriver",
-    "selenium",
-    "mocha"
+  "files": [
+    "lib"
   ],
-  "author": "Dylan Foster <dylan947@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-  },
+  "main": "./lib/index.js",
+  "keywords": [
+    "selenium",
+    "webriver",
+    "actions"
+  ],
   "devDependencies": {
-    "chai": "^1.9.1",
-    "gulp": "^3.8.6",
-    "jsdoc": "^3.3.0-alpha9"
-  }
+    "babel": "^5.6.14",
+    "babel-eslint": "^3.1.19",
+    "chai": "^3.0.0",
+    "gulp": "^3.6.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-eslint": "^0.14.0",
+    "gulp-istanbul": "^0.10.0",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "isparta": "^3.0.3",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/gulp"
+  },
+  "license": "MIT"
 }
