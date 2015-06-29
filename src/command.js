@@ -1,13 +1,21 @@
 "use strict";
 
+import extend from "extend";
 import WebDriver from "selenium-webdriver";
+
+const DEFAULTS = {
+  selenium: "http://localhost:4444/wd/hub",
+  capabilities: {
+    browserName: "firefox",
+    acceptSslCerts: true,
+    unexpectedAlertBehaviour: "accept"
+  }
+};
 
 class Commands {
   constructor(config = {}) {
+    config = extend(true, DEFAULTS, config);
     this.config = config;
-    this.config.selenium = config.selenium || "http://localhost:4444/wd/hub";
-    this.config.capabilities = this.config.capabilities ||
-    { browserName: "firefox", acceptSslCerts: true, unexpectedAlertBehaviour: "accept" };
   }
 
   setDriver() {
