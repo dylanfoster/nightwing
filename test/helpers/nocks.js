@@ -6,7 +6,7 @@ export function session () {
   nock("http://localhost:4444/wd/hub")
     .post("/session")
     .reply(201, {
-      state: "null",
+      status: 0,
       sessionId: "1352110219202",
       value: {
         javascriptEnabled: true,
