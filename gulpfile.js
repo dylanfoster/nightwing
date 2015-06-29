@@ -42,7 +42,7 @@ gulp.task("lint", function () {
     .pipe(eslint.format("stylish"));
 });
 
-gulp.task("test", ["cover"], function () {
+gulp.task("test", ["cover"], function (done) {
   var mochaErr;
 
   gulp.src(TEST_SRC)

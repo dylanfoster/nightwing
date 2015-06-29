@@ -14,7 +14,7 @@
   },
   "rules": {
     "block-scoped-var": 2,
-    "brace-style": [2, "1tbs"],
+    "brace-style": [2, "1tbs", { allowSingleLine: true }],
     "consistent-return": 2,
     "consistent-this": [0, "self"],
     "curly": 2,
