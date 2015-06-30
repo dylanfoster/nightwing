@@ -11,7 +11,7 @@ $ npm install --save nightwing
 ## Usage
 
 nightwing works by injecting several intuitive commands globally into your tests.
-By default, [mochajs](mochajs.org) is used as the test runner, but this can be
+By default, [mochajs](http://mochajs.org) is used as the test runner, but this can be
 configured using the `--runner` flag or programmatically by passing in `{ runner: foo }`
 to the `Nightwing` constructor. **Note** currently, only Mocha is supported, but
 we plan to continue building out support for more runners in the future
