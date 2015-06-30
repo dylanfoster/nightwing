@@ -67,6 +67,41 @@ export function session(times) {
   return this;
 }
 
+export function text(value, times) {
+  let mock = nock(BASE)
+    .get("/wd/hub/session/1352110219202/element/0/text");
+
+  if (times) {
+    mock.times(times);
+  }
+
+  mock.reply(200, {
+    status: 0,
+    sessionId: "1352110219202",
+    value: value,
+    state: "success"
+  });
+  return this;
+}
+
+export function value(value, times) {
+  let mock = nock(BASE)
+    .post("/wd/hub/session/1352110219202/element/0/value", {
+      value: [value]
+    });
+
+  if (times) {
+    mock.times(times);
+  }
+
+  mock.reply(200, {
+    status: 0,
+    sessionId: "1352110219202",
+    state: "success"
+  });
+  return this;
+}
+
 export function cleanAll() {
   nock.cleanAll();
 }
@@ -75,5 +110,7 @@ export default {
   cleanAll: cleanAll,
   elementFound: elementFound,
   elementNotFound: elementNotFound,
-  session: session
+  session: session,
+  text: text,
+  value: value
 };
