@@ -9,7 +9,7 @@ import find from "../../src/commands/find";
 import setDriver from "../../src/commands/set_driver";
 import fillIn from "../../src/commands/fill_in";
 
-describe.only("fillIn", function () {
+describe("fillIn", function () {
   let driver;
 
   beforeEach(function () {
@@ -28,10 +28,18 @@ describe.only("fillIn", function () {
 
     fillIn(driver, ".foo", "foo");
     find(driver, ".foo").then(function (el) {
-      console.log(el);
       return el.getText();
     }).then(function (text) {
       expect(text).to.eql("foo");
+      done();
+    });
+  });
+
+  it("returns an error if no element is found", function (done) {
+    nocks.elementNotFound(".foo").value("foo").text("foo");
+
+    fillIn(driver, ".bar").then(null, function (err) {
+      expect(err.message).to.eql("NoSuchElementError: undefined");
       done();
     });
   });
