@@ -2,7 +2,43 @@
 
 import nock from "nock";
 
-let BASE = "http://localhost:4444";
+const BASE = "http://localhost:4444";
+
+export function visit(uri, times) {
+  let mock = nock(BASE)
+    .post("/wd/hub/session/1352110219202/url", { url: uri });
+
+  if (times) {
+    mock.times(times);
+  }
+
+  mock.reply(200, {
+    sessionId: "1352110219202",
+    status: 0,
+    class: "org.openqa.selenium.remote.response",
+    hcode: "1899219352",
+    value: uri
+  });
+  return this;
+}
+
+export function url(uri, times) {
+  let mock = nock(BASE)
+    .get("/wd/hub/session/1352110219202/url");
+
+  if (times) {
+    mock.times(times);
+  }
+
+  mock.reply(200, {
+    sessionId: "1352110219202",
+    status: 0,
+    class: "org.openqa.selenium.remote.response",
+    hcode: "1899219352",
+    value: uri
+  });
+  return this;
+}
 
 export function elementNotFound(selector, times) {
   let mock = nock(BASE)
@@ -18,8 +54,8 @@ export function elementNotFound(selector, times) {
   mock.reply(404, {
     sessionId: "1352110219202",
     status: 7,
-    class: "org.openqa.selenium.remote.Response",
-    hCode: "1899219352"
+    class: "org.openqa.selenium.remote.response",
+    hcode: "1899219352"
   });
   return this;
 }
@@ -112,5 +148,7 @@ export default {
   elementNotFound: elementNotFound,
   session: session,
   text: text,
-  value: value
+  url: url,
+  value: value,
+  visit: visit
 };
