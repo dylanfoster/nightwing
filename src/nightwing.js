@@ -1,5 +1,7 @@
 "use strict";
 
+import path from "path";
+
 import Mocha from "mocha";
 
 import fillIn from "./commands/fill_in";
@@ -7,11 +9,19 @@ import find from "./commands/find";
 import setDriver from "./commands/set_driver";
 import visit from "./commands/visit";
 
+const DEFAULT_OPTIONS = {
+  selenium: "",
+  capabilities: {
+    browserName: "phantomjs"
+  }
+};
+
 class Nightwing extends Mocha {
-  constructor(options) {
+  constructor(options = {}) {
     super(options);
 
-    this.driver = setDriver({ capabilities: { browserName: "phantomjs" }});
+    this.config = options.config || DEFAULT_OPTIONS;
+    this.driver = setDriver(this.config);
     this._loadGlobals();
   }
 
