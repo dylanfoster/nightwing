@@ -1,7 +1,5 @@
 "use strict";
 
-import path from "path";
-
 import Mocha from "mocha";
 
 import fillIn from "./commands/fill_in";

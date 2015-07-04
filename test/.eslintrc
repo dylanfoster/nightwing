@@ -1,0 +1,5 @@
+---
+  rules:
+    no-new: 0
+    no-shadow: 0
+    no-unused-vars: 0

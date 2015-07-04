@@ -15,7 +15,7 @@ describe("Nightwing", function () {
 
   it("loads methods into the global scope", function () {
     nocks.session();
-    let nightwing = new Nightwing();
+    new Nightwing();
 
     expect(browser).to.be.an("object");
     expect(visit).to.be.a("function");

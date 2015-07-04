@@ -8,7 +8,7 @@ import nocks from "../helpers/nocks";
 import setDriver from "../../src/commands/set_driver";
 import find from "../../src/commands/find";
 
-describe("FindComand", function () {
+describe("find", function () {
   let driver;
 
   beforeEach(function () {
