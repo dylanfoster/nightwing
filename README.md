@@ -1,4 +1,4 @@
-# nightwing [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage Status][coveralls-image]][coveralls-url]
+# nightwing [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
 An intuitive interaction library based on [webdriverjs](https://www.npmjs.com/package/selenium-webdriver)
 
@@ -67,8 +67,6 @@ $ nightwing [options] [files|dir]
 
 MIT © Dylan Foster
 
-[coveralls-image]: https://coveralls.io/repos/dylanfoster/nightwing/badge.svg?branch=development
-[coveralls-url]: https://coveralls.io/r/dylanfoster/nightwing?branch=development
 [npm-image]: https://badge.fury.io/js/nightwing.svg
 [npm-url]: https://npmjs.org/package/nightwing
 [travis-image]: https://travis-ci.org/dylanfoster/nightwing.svg?branch=development
