@@ -11,7 +11,7 @@ describe("Nightwing - Acceptance", function () {
   this.timeout(60000);
 
   before(function () {
-    new Nightwing({ config: { capabilities: { browserName: "chrome" }}});
+    new Nightwing();
     return visit("http://www.google.com");
   });
 
@@ -36,7 +36,7 @@ describe("Nightwing - Acceptance", function () {
   describe("fillIn", function () {
     it("fills in an input", function () {
       return fillIn("input[name=q]", "foo").then(function () {
-        return find("input[name=btnK]");
+        return find("input[name=btnG]");
       }).then(function (el) {
         return el.click();
       }).then(function () {
