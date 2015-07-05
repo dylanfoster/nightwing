@@ -35,9 +35,9 @@ describe("Nightwing - Acceptance", function () {
 
   describe("fillIn", function () {
     it("fills in an input", function () {
-      return fillIn("input[name=q]", "foo").then(function () {
-        return find("input[name=btnG]");
-      }).then(function (el) {
+      fillIn("input[name=q]", "foo");
+
+      return find("input[name=btnG]").then(function (el) {
         return el.click();
       }).then(function () {
         return expect(browser.getTitle()).to.eventually.eql("foo - Google Search");
