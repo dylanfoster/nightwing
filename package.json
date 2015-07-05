@@ -33,7 +33,9 @@
     "gulp-plumber": "^1.0.0",
     "isparta": "^3.0.3",
     "mocha": "^2.2.5",
-    "nock": "^2.6.0"
+    "nock": "^2.6.0",
+    "sinon": "^1.15.4",
+    "sinon-chai": "^2.8.0"
   },
   "scripts": {
     "test": "node_modules/.bin/_mocha --compilers js:babel/register --recursive",
@@ -42,6 +44,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "nopt": "^3.0.3",
     "selenium-webdriver": "^2.46.1"
   }
 }
