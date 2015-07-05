@@ -26,15 +26,15 @@ class Nightwing extends Mocha {
   _loadGlobals() {
     global.browser = this.driver;
 
-    global.visit = function (page) {
+    global.visit = (page) => {
       return visit(this.driver, page);
     };
 
-    global.fillIn = function (selector) {
-      return fillIn(this.driver, selector);
+    global.fillIn = (selector, text) => {
+      return fillIn(this.driver, selector, text);
     };
 
-    global.find = function (selector) {
+    global.find = (selector) => {
       return find(this.driver, selector);
     };
   }
